@@ -1,0 +1,13 @@
+Dependencies: 
+  RabbitMQ*: https://www.rabbitmq.com/#getstarted
+  Bunny, which is used in the RabbitMQ tutorials
+  Mongodb/Mongoid*: https://docs.mongodb.com/manual/administration/install-community/
+  Sinatra: http://sinatrarb.com/
+  and of course, Ruby
+  
+  Once you've pulled the files and the servers* are running, run bundle install from the command line and from
+  another terminal window, run Ruby bunny.rb. The site should be up and running on http://localhost:4567/
+  
+  The connection to RabbitMQ will default to your local server, or connect to a remote resource by adding hosting creds:
+    Bunny.new(:host => "<<<address>>>:<<<port>>>>", :vhost => "/", :user => "<<<username>>>", :password => "<<<pw>>>")
+  
