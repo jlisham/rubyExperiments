@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
-require 'sinatra'
+require 'sinatra' #site hosting/framework
 require "bunny" #require for server connection
 require "json" #require for json manipulation
-require 'mongoid'
+require 'mongoid' #db
 
 #DB setup
 Mongoid.load! "mongoid.config"
@@ -32,7 +32,7 @@ end
 
 
 #endpoints
-get '/res' do
+get '/' do
 
     #connect to rabbitMQ and check for messages***************************/
     conn = Bunny.new()#credentials removed for security
